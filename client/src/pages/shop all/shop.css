@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+/* 
+==========================================================
+
+                    S H O P - A L L
+
+==========================================================               
+
+ */
+
+ @media (min-width:901px) {
+
+
+    .filter {
+        width: 79%;
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .filter div {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filter div p {
+        display: flex;
+        margin-top: 30px;
+        color: #777777;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14.80px;
+    }
+
+    .filter div a {
+        display: flex;
+        color: black;
+    }
+
+    .filter div img {
+        width: 20px;
+        margin-left: 20px;
+    }
+
+    .p {
+        margin-top: 10px;
+    }
+
+
+    .orderby {
+        width: 160px;
+        height: 50%;
+        margin-top: 36px;
+        margin-left: 30px;
+        border: none;
+        color: #777777;
+    }
+
+
+
+    #shop {
+        width: 80%;
+        height: auto;
+        display: flex;
+        align-items: start;
+        flex-wrap: wrap;
+    }
+
+  
+
+    .cart-shop {
+        width: 23%;
+        display: flex;
+        margin-top: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+        flex-direction: column;
+    }
+
+    .orderimage {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .orderimage img {
+        width: 100%;
+        scale: 1;
+        transition: all .4s;
+        -webkit-transition: all .4s;
+        -moz-transition: all .4s;
+        -ms-transition: all .4s;
+        -o-transition: all .4s;
+    }
+
+    .cart-shop:hover .orderimage img {
+        scale: 1.2;
+    }
+
+    .eyes {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        transition: all .4s;
+        -webkit-transition: all .4s;
+        -moz-transition: all .4s;
+        -ms-transition: all .4s;
+        -o-transition: all .4s;
+    }
+
+    .orderimage:hover .eyes {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .eyes>div {
+        position: relative;
+        height: 2em;
+        width: 2em;
+        display: grid;
+        place-items: center;
+        background-color: #fff;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        margin-bottom: 10px;
+
+    }
+
+
+    .icon-title {
+        position: absolute;
+        left: -100px;
+        display: none;
+        background-color: black;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 13px;
+    }
+
+    .eyes>div:hover .icon-title {
+        display: block;
+    }
+
+
+    .fa-basket-shopping {
+        color: #504f4f;
+    }
+
+    .cart-shop a {
+        color: black;
+    }
+
+    .cart-shop:hover .eyes {
+        display: block;
+
+    }
+
+    .fa-eye {
+        color: #504f4f;
+        background-color: white;
+        box-shadow: black;
+    }
+
+    .star {
+        width: 30%;
+        height: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .fa-star {
+        color: #0000002f;
+        font-size: 12px;
+    }
+
+    .bottom-left {
+        /* height: 35px; */
+        width: 50%;
+        margin-left: 18px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .bottom-left h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 14.2px;
+        margin-top: 10px;
+    }
+
+    .bottom-left-bottom {
+        display: flex;
+    }
+
+    .bottom-left-bottom h2 {
+        font-size: 14px;
+        margin-top: 3px;
+        margin-left: 3px;
+        font-weight: 700;
+        color: #000000A8;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .bottom-left-bottom p del {
+        color: #0000003f;
+    }
+
+}
+
+
+@media (max-width:900px) {
+
+
+
+    .filter {
+        margin-top: 110px;
+        margin-left: -134px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .filter div {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .filter div p {
+        color: #777777;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12.80px;
+    }
+
+    .filter div a {
+        color: black;
+    }
+
+    .filter div img {
+        width: 20px;
+        margin-left: 20px;
+    }
+
+    .p {
+        margin-top: 10px;
+    }
+
+
+    .orderby {
+        width: 160px;
+        height: 50%;
+        margin-left: 30px;
+        border: none;
+        color: #777777;
+    }
+
+
+
+    #shop {
+        width: 96%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .cart-shop {
+        width: 50%;
+        display: flex;
+        margin-top: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+        flex-direction: column;
+    }
+
+    .shop2 {
+        margin-top: 0px;
+    }
+
+    .orderimage {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .orderimage img {
+        width: 100%;
+        scale: 1;
+        transition: all .4s;
+        -webkit-transition: all .4s;
+        -moz-transition: all .4s;
+        -ms-transition: all .4s;
+        -o-transition: all .4s;
+    }
+
+    .cart-shop:hover .orderimage img {
+        scale: 1.2;
+    }
+
+    .eyes {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        transition: all .4s;
+        -webkit-transition: all .4s;
+        -moz-transition: all .4s;
+        -ms-transition: all .4s;
+        -o-transition: all .4s;
+    }
+
+    .orderimage:hover .eyes {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .eyes>div {
+        position: relative;
+        height: 2em;
+        width: 2em;
+        display: grid;
+        place-items: center;
+        background-color: #fff;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        margin-bottom: 10px;
+
+    }
+
+
+    .icon-title {
+        position: absolute;
+        left: -100px;
+        display: none;
+        background-color: black;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 13px;
+    }
+
+    .eyes>div:hover .icon-title {
+        display: block;
+    }
+
+
+    .fa-basket-shopping {
+        color: #504f4f;
+    }
+
+    .cart-shop a {
+        color: black;
+    }
+
+    .cart-shop:hover .eyes {
+        display: block;
+
+    }
+
+    .fa-eye {
+        color: #504f4f;
+        background-color: white;
+        box-shadow: black;
+    }
+
+    .star {
+        width: 30%;
+        height: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .fa-star {
+        color: #0000002f;
+        font-size: 12px;
+    }
+
+    .bottom-left {
+        width: 50%;
+        margin-left: 18px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .bottom-left h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 14.2px;
+        margin-top: 10px;
+    }
+
+    .bottom-left-bottom {
+        display: flex;
+    }
+
+    .bottom-left-bottom h2 {
+        font-size: 14px;
+        margin-top: 3px;
+        margin-left: 3px;
+        font-weight: 700;
+        color: #000000A8;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .bottom-left-bottom p del {
+        color: #0000003f;
+    }
+
+}

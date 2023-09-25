@@ -1,0 +1,11 @@
+{
+  "name": "scooter-react",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "json-server --watch db.json"
+  },
+  "dependencies": {
+    "react-router-dom": "^6.16.0"
+  }
+}

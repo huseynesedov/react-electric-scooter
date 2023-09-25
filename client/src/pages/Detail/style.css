@@ -1,0 +1,128 @@
+@import "react-alice-carousel/lib/alice-carousel.css";
+
+a {
+    text-decoration: none;
+    color: initial;
+}
+
+#detail {
+    margin-top: 170px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.centermain1 {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+
+.sol1 {
+    border: 1px solid black;
+    width: 50%;
+}
+
+.sag1 {
+    width: 46%;
+    border: 1px solid black;
+
+}
+
+.sag1 .h3 {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.sag1 .h2 {
+    display: inline-block;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.h2-span {
+    color: #777777;
+}
+
+.sag1 p {
+    display: inline-block;
+    margin-top: 5px;
+    color: #777777;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+.hr{
+    color: #aeadad1b;
+    margin-top: 60px;
+}
+.add {
+    display: flex;
+    margin-top: 20px;
+}
+
+.button {
+
+
+    padding: 1.5% 15px;
+    margin-left: 13px;
+    border-radius: 5px;
+    border: none;
+    background-color: #C93535;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: white;
+    transition: 0.3s inherit;
+    cursor: pointer;
+}
+
+ .button:hover {
+    background-color: black;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content {
+    color: #777777;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.85714285714286;
+}
+
+.scooter {
+    color: #C93535;
+}
+
+.sol1 .img {
+    width: 100%;
+    height: 80%;
+}
+
+.sol1-radio {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.sol1-radio .img-radio {
+    width: 23%;
+}

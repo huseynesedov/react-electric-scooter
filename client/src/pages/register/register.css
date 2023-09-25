@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* 
+==========================================================
+
+                    N A V 
+
+==========================================================               
+
+ */
+
+@media (min-width:901px) {
+
+
+
+
+    .main {
+        width: 100%;
+        height: 105vh;
+        margin-top: 50px;
+        background-image: url('./img-video/scooters.gif');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    .opsi {
+        width: 80%;
+        height: 85%;
+        background-color: #ffffff2a;
+        display: flex;
+        border-radius: 15px;
+        border: 5px solid transparent;
+    }
+
+
+    .sekill {
+        margin-top: 50px;
+    }
+
+    .yuxari {
+        margin-top: 90px;
+    }
+
+    .orta {
+        margin-top: 30px;
+    }
+
+    .gif {
+        width: 50%;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(./img-video/_.gif);
+    }
+
+
+
+
+
+    .wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .buttons2 {
+        width: 60%;
+        margin-top: 50px;
+        display: flex;
+    }
+
+    .g-signin2 {
+        margin-top: 50px;
+        margin-right: 0px;
+    }
+
+    .button2 {
+        font-family: 'Ubuntu', sans-serif;
+        position: absolute;
+        left: 48%;
+        transform: translate(-50%, -50%);
+
+        width: 100px;
+        height: 40px;
+        line-height: 1;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border: 3px solid #C93535;
+        background: white;
+        color: #7297F9;
+        border-radius: 10px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all .35s;
+    }
+
+    .button2:hover {
+        background: #7297F9;
+        color: #C93535;
+    }
+
+    .button2 span {
+        opacity: 1;
+        visibility: visible;
+        transition: all .35s;
+    }
+
+    .success {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border-radius: 50%;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .35s;
+    }
+
+    .success svg {
+        width: 20px;
+        height: 20px;
+        fill: #7297F9;
+        transform-origin: 50% 50%;
+        transform: translateY(-50%) rotate(0deg) scale(0);
+        transition: all .35s;
+    }
+
+    .button2.is_active {
+        width: 40px;
+        height: 40px;
+    }
+
+    .button2.is_active .success {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .button2.is_active .success svg {
+        margin-top: 50%;
+        transform: translateY(-50%) rotate(720deg) scale(1);
+    }
+
+    .button2.is_active span {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+
+
+
+
+
+    .login {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background-color: #ffffffc4;
+    }
+
+    .login .sag {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+    }
+
+    .sag p {
+        margin-top: 15px;
+        color: #2600ff;
+    }
+
+    .form__group {
+        position: relative;
+        padding: 2px 0 0;
+        width: 70%;
+    }
+
+    .form__field {
+        font-family: inherit;
+        width: 100%;
+        border: 0;
+        border-bottom: 3px solid #7297F9;
+        outline: 0;
+        font-size: 1.3rem;
+        color: #7297F9;
+        padding: 12px 15px;
+        background: transparent;
+        transition: border-color 0.5s;
+    }
+
+    .form__field::placeholder {
+        color: transparent;
+    }
+
+    .form__field:placeholder-shown~.form__label {
+        font-size: 1.2rem;
+        cursor: text;
+        top: 20px;
+    }
+
+    .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.5s;
+        font-size: 1rem;
+        color: #C93535;
+    }
+
+    .form__field:focus {
+        padding-bottom: 6px;
+        font-weight: 700;
+        border-width: 3px;
+        border-image: linear-gradient(to right, #7297F9, #C93535);
+        border-image-slice: 1;
+    }
+
+    .form__field:focus~.form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 0.9rem;
+        color: black;
+        font-weight: 700;
+    }
+
+
+    .cyberpunk-checkbox {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #7297F9;
+        border-radius: 5px;
+        background-color: transparent;
+        display: inline-block;
+        position: relative;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .cyberpunk-checkbox:before {
+        content: "";
+        background-color: #C93535;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        width: 10px;
+        height: 10px;
+        border-radius: 3px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .cyberpunk-checkbox:checked:before {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .cyberpunk-checkbox-label {
+        font-size: 18px;
+        color: rgb(132, 132, 132);
+        cursor: pointer;
+        user-select: none;
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+
+
+
+@media (max-width:900px) {
+
+    .main{
+        width: 100%;
+        height: 85vh;
+        margin-top: 50px;
+        background-image: url('./img-video/scooters.gif');
+        background-position: 20%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    .opsi {
+        width: 89%;
+        height: 75%;
+        background-color: #ffffff2a;
+        display: flex;
+        border-radius: 15px;
+        border: 5px solid transparent;
+    }
+
+
+    .sekil {
+        margin-top: 50px;
+    }
+
+    .yuxari {
+        margin-top: 30px;
+    }
+
+    .orta {
+        margin-top: 30px;
+    }
+
+
+
+
+
+
+    .wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .buttons2 {
+        width: 69%;
+        margin-top: 50px;
+        display: flex;
+    }
+
+    .g-signin {
+        margin-top: 50px;
+        margin-bottom: 32px;
+    }
+
+    .button2 {
+        font-family: 'Ubuntu', sans-serif;
+        position: absolute;
+        left: 48%;
+        transform: translate(-50%, -50%);
+
+        width: 100px;
+        height: 40px;
+        line-height: 1;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border: 3px solid #C93535;
+        background: white;
+        color: #7297F9;
+        border-radius: 10px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all .35s;
+    }
+
+    .button2:hover {
+        background: #7297F9;
+        color: #C93535;
+    }
+
+    .button2 span {
+        opacity: 1;
+        visibility: visible;
+        transition: all .35s;
+    }
+
+    .success {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border-radius: 50%;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .35s;
+    }
+
+    .success svg {
+        width: 20px;
+        height: 20px;
+        fill: #7297F9;
+        transform-origin: 50% 50%;
+        transform: translateY(-50%) rotate(0deg) scale(0);
+        transition: all .35s;
+    }
+
+    .button2.is_active {
+        width: 40px;
+        height: 40px;
+    }
+
+    .button2.is_active .success {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .button2.is_active .success svg {
+        margin-top: 50%;
+        transform: translateY(-50%) rotate(720deg) scale(1);
+    }
+
+    .button2.is_active span {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+
+
+
+
+
+    .login {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 15px;
+        background-color: #ffffffc4;
+    }
+
+    .login .sag {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-content:center;
+    }
+
+    .sag p {
+        margin-top: 15px;
+        color: #2600ff;
+    }
+
+    .form__group {
+        position: relative;
+        padding: 2px 0 0;
+    }
+
+    .form__field {
+        font-family: inherit;
+        width: 100%;
+        border: 0;
+        border-bottom: 3px solid #7297F9;
+        outline: 0;
+        font-size: 1.3rem;
+        color: #7297F9;
+        padding: 12px 15px;
+        background: transparent;
+        transition: border-color 0.5s;
+    }
+
+    .form__field::placeholder {
+        color: transparent;
+    }
+
+    .form__field:placeholder-shown~.form__label {
+        font-size: 1.2rem;
+        cursor: text;
+        top: 20px;
+    }
+
+    .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.5s;
+        font-size: 1rem;
+        color: #C93535;
+    }
+
+    .form__field:focus {
+        padding-bottom: 6px;
+        font-weight: 700;
+        border-width: 3px;
+        border-image: linear-gradient(to right, #7297F9, #C93535);
+        border-image-slice: 1;
+    }
+
+    .form__field:focus~.form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 0.9rem;
+        color: black;
+        font-weight: 700;
+    }
+
+
+    .cyberpunk-checkbox {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #7297F9;
+        border-radius: 5px;
+        background-color: transparent;
+        display: inline-block;
+        position: relative;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .cyberpunk-checkbox:before {
+        content: "";
+        background-color: #C93535;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        width: 10px;
+        height: 10px;
+        border-radius: 3px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .cyberpunk-checkbox:checked:before {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .cyberpunk-checkbox-label {
+        font-size: 18px;
+        color: rgb(132, 132, 132);
+        cursor: pointer;
+        user-select: none;
+        display: flex;
+        align-items: center;
+    }
+
+
+
+
+
+}
