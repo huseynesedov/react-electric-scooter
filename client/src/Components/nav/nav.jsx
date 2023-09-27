@@ -76,7 +76,7 @@ function Navbar() {
             </div>
             <Link to='/add'>
             
-            <FontAwesomeIcon icon={faBox} />
+            <FontAwesomeIcon className='box' icon={faBox} />
             </Link>
             <Link to='/Login'>
             

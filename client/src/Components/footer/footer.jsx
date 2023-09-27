@@ -1,15 +1,13 @@
 import React from 'react';
 import './footer.css'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { } from '@fortawesome/free-solid-svg-icons';
+import { FaWhatsapp, FaInstagramSquare,FaGithub } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
 
         <>
-         
+
             <footer className="footer-distributed">
                 <div className="footer-left">
                     <Link to='/'>
@@ -32,8 +30,10 @@ function Footer() {
                         </p>
                     </div>
                     <div>
+                        <Link to="https://wa.me/+994517600300">
                         <i className="fa fa-phone" />
                         <p>+99451-760-03-00</p>
+                        </Link>
                     </div>
                     <div>
                         <i className="fa fa-envelope" />
@@ -48,18 +48,15 @@ function Footer() {
                         Scooterların Satişları buradadır,Biz 1990-cı ilden fealiyet gosderirik.
                     </p>
                     <div className="footer-icons">
-                        <a href="#">
-
-                        </a>
-                        <a href="#">
-                            <i className="fa fa-twitter" />
-                        </a>
-                        <a href="#">
-                            <i className="fa fa-linkedin" />
-                        </a>
-                        <a href="#">
-                            <i className="fa fa-github" />
-                        </a>
+                        <Link to="https://www.instagram.com/huseyyn005/">
+                            <FaInstagramSquare />
+                        </Link>
+                        <Link to="https://wa.me/+994517600300">
+                            <FaWhatsapp />
+                        </Link>
+                        <Link to="https://github.com/huseynesedov">
+                            <FaGithub/>
+                        </Link>
                     </div>
                 </div>
             </footer>

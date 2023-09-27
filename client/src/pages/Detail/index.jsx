@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import { Helmet } from "react-helmet";
 import axios from 'axios';
+import { Link, useParams } from 'react-router-dom';
 
 import Navbar from '../../Components/nav/nav';
 import Footer from '../../Components/footer/footer';
 
-import { Link, useParams } from 'react-router-dom';
-
+import debet from '../images/debet-cart.jpg'
+import { TiTick } from 'react-icons/ti';
 import './style.css'
 function Detail() {
     const { id } = useParams()
@@ -18,10 +19,7 @@ function Detail() {
             try {
                 const response = await axios.get(`http://localhost:3000/data/${id}`);
                 setTodos(response.data)
-                console.log(response.data);
-
             } catch (err) {
-                console.log(err);
             }
 
         };
@@ -37,9 +35,9 @@ function Detail() {
                 <title>Detail | Electric scooter</title>
                 <link rel="canonical" href="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/scooter-02.png" />
             </Helmet>
-
-
             <Navbar></Navbar>
+
+
 
             <section id="detail">
                 <div className="centermain1">
@@ -66,9 +64,6 @@ function Detail() {
                             <h2 className='h2'>{todos.price}</h2><span className='h2-span'>& Free Shipping</span>
                         </div>
                         <span className='content'>{todos.content}</span>
-                        <hr className='hr' />
-
-                        <h2 className='h2'>{todos.price}</h2>
                         <div className='add'>
 
                             <a href="" className="minus">
@@ -95,12 +90,48 @@ function Detail() {
 
                             <button className="button button-r">ADD TO CART</button>
 
-                        </div>
 
+
+                        </div>
+                        <div className="debet-cart">
+                            <span className="p-debet">
+                                <b>
+                                    Guaranteed Safe Checkout
+                                </b>
+                            </span>
+                            <img className='debet-img' src={debet} alt="" />
+                        </div>
+                        <div className="tick">
+                            <div>
+
+                                <TiTick /><span className="p-debet2">No-Risk Money Back Guarantee!</span>
+                            </div>
+                            <div>
+
+                                <TiTick /><span className="p-debet2">No Hassle Refunds</span>
+                            </div>
+                            <div>
+
+                                <TiTick /><span className="p-debet2">Secure Payments</span>
+                            </div>
+
+
+                        </div>
                     </div>
                 </div>
             </section>
+            <main className="main-detail">
+                <div className="main-detail-div">
+                    <h2 className="h2-main-detail">
 
+                        Description
+                    </h2>
+                    <h3 className='h3 mar'>{todos.title}</h3>
+                    <span className='content mar'>{todos.content}</span>
+
+                    <span className="content mar">Pellentesque magna arcu, lacinia sed mi non, pretium posuere eros. Mauris maximus imperdiet sem aliquam facilisis. Nam in sem at augue finibus vehicula eget quis sapien. Pellentesque malesuada ligula vel auctor facilisis. In condimentum mattis ornare.</span>
+                </div>
+            </main>
 
 
 

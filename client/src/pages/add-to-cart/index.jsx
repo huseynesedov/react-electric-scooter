@@ -23,27 +23,27 @@ function AddToCart() {
                         <h3>Cart</h3>
                         <table className="table">
                             <thead>
-                                <tr className="tr">
-                                    <td />
-                                    <td>Product</td>
-                                    <td>price</td>
-                                    <td>Quantity</td>
-                                    <td>Subtotal</td>
-                                    <td>Delete</td>
+                                <tr className="tr tr2">
+                                    <td className='td' > </td>
+                                    <td className='td'>Product</td>
+                                    <td className='td'>price</td>
+                                    <td className='td'>Quantity</td>
+                                    <td className='td'>Subtotal</td>
+                                    <td className='td'>Delete</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr className="main-tr">
-                                    <td>
+                                    <td className="td-sag">
                                         <img
                                             className="img2"
                                             src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-17-a.jpg"
                                             alt=""
                                         />
                                     </td>
-                                    <td>Hammer Scooter Lock</td>
-                                    <td>16</td>
-                                    <td>
+                                    <td className='ham'>Hammer Scooter Lock</td>
+                                    <td class="td-sag price">16</td>
+                                    <td className="td-sag">
                                         <div className="vote">
                                             <a href="" className="minus">
                                                 -
@@ -68,10 +68,10 @@ function AddToCart() {
                                             </a>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td className="td-sag dollar">
                                         750$
                                     </td>
-                                    <td>
+                                    <td className="td-sag">
 
                                         <AiTwotoneDelete className='delete' />
                                     </td>
@@ -80,8 +80,8 @@ function AddToCart() {
                         </table>
                     </div>
                     <div className="sag3">
-                        <thead className='thead'>
-                            <tr className="tr tr2">
+                        <thead className='thead2 thead'>
+                            <tr className="tr tr3">
 
                                 <td className='td2'><b>Cart Totals</b></td>
                             </tr>

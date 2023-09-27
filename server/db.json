@@ -88,6 +88,18 @@
         },
         {
             "id": "8",
+            "title": "North D Booster 2000",
+            "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-10-a.jpg",
+            "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-10-b.jpg",
+            "src3": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-10-c.jpg",
+            "src4": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-10-d.jpg",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+            "price": "$870.00",
+            "del": "",
+            "count": 1
+        },
+        {
+            "id": "9",
             "title": "North Bosster 1",
             "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-11-a.jpg",
             "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-11-b.jpg",
@@ -99,7 +111,7 @@
             "count": 1
         },
         {
-            "id": "9",
+            "id": "10",
             "title": "North D Booster 2000",
             "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-06-a.jpg",
             "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-06-b.jpg",
@@ -111,7 +123,7 @@
             "count": 1
         },
         {
-            "id": "10",
+            "id": "11",
             "title": "Practico Pro 500",
             "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-04-a.jpg",
             "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-04-b.jpg",
@@ -123,7 +135,7 @@
             "count": 1
         },
         {
-            "id": "11",
+            "id": "12",
             "title": "Practico S2 Exclusive",
             "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-05-a.jpg",
             "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-05-b.jpg",
@@ -135,7 +147,7 @@
             "count": 1
         },
         {
-            "id": "12",
+            "id": "13",
             "title": "Practico Z50 Exclusive",
             "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-09-a.jpg",
             "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-09-b.jpg",
@@ -147,7 +159,7 @@
             "count": 1
         },
         {
-            "id": "13",
+            "id": "14",
             "title": "SilverPatch C1",
             "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-07-a.jpg",
             "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-07-b.jpg",
@@ -159,7 +171,7 @@
             "count": 1
         },
         {
-            "id": "14",
+            "id": "15",
             "title": "SilverPatch MAX1",
             "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-08-a.jpg",
             "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-08-b.jpg",
@@ -171,7 +183,7 @@
             "count": 1
         },
         {
-            "id": "15",
+            "id": "16",
             "title": "SilverPatch MAX2",
             "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-14-a.jpg",
             "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-14-b.jpg",
@@ -183,7 +195,7 @@
             "count": 1
         },
         {
-            "id": "16",
+            "id": "17",
             "title": "U-lock Force",
             "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-15-a.jpg",
             "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-15-b.jpg",
@@ -195,7 +207,7 @@
             "count": 1
         },
         {
-            "id": "17",
+            "id": "18",
             "title": "U-lock Force MAX",
             "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-16-a.jpg",
             "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-16-b.jpg",
@@ -331,6 +343,18 @@
         },
         {
             "id": "8",
+            "title": "North D Booster 2000",
+            "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-10-a.jpg",
+            "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-10-b.jpg",
+            "src3": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-10-c.jpg",
+            "src4": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-10-d.jpg",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+            "price": "$870.00",
+            "del": "",
+            "count": 1
+        },
+        {
+            "id": "9",
             "title": "North Bosster 1",
             "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-11-a.jpg",
             "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-11-b.jpg",
@@ -342,7 +366,7 @@
             "count": 1
         },
         {
-            "id": "9",
+            "id": "10",
             "title": "North D Booster 2000",
             "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-06-a.jpg",
             "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-06-b.jpg",
@@ -351,6 +375,81 @@
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
             "price": "$870.00",
             "del": "",
+            "count": 1
+        },
+        {
+            "id": "11",
+            "title": "Practico Pro 500",
+            "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-04-a.jpg",
+            "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-04-b.jpg",
+            "src3": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-04-c.jpg",
+            "src4": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-04-d.jpg",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+            "price": "$699.00",
+            "del": "",
+            "count": 1
+        },
+        {
+            "id": "12",
+            "title": "Practico S2 Exclusive",
+            "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-05-a.jpg",
+            "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-05-b.jpg",
+            "src3": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-05-c.jpg",
+            "src4": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-05-d.jpg",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+            "price": "$600.00",
+            "del": "$750.00",
+            "count": 1
+        },
+        {
+            "id": "13",
+            "title": "Practico Z50 Exclusive",
+            "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-09-a.jpg",
+            "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-09-b.jpg",
+            "src3": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-09-c.jpg",
+            "src4": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-09-d.jpg",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+            "price": "$750.00",
+            "del": "",
+            "count": 1
+        },
+        {
+            "id": "14",
+            "title": "SilverPatch C1",
+            "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-07-a.jpg",
+            "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-07-b.jpg",
+            "src3": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-07-c.jpg",
+            "src4": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-07-d.jpg",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+            "price": "$725.00",
+            "del": "",
+            "count": 1
+        },
+        {
+            "id": "15",
+            "title": "SilverPatch MAX1",
+            "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-08-a.jpg",
+            "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-08-b.jpg",
+            "src3": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-08-c.jpg",
+            "src4": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-08-d.jpg",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+            "price": "$699.00",
+            "del": "",
+            "count": 1
+        }
+    ],
+
+    "home":[
+        {
+            "id": "6",
+            "title": "Libero X350",
+            "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-03-a.jpg",
+            "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-03-b.jpg",
+            "src3": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-03-c.jpg",
+            "src4": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-03-d.jpg",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+            "price": "$799.00",
+            "del": "$875.00",
             "count": 1
         },
         {
@@ -364,54 +463,44 @@
             "price": "$699.00",
             "del": "",
             "count": 1
-        },
-        {
-            "id": "11",
-            "title": "Practico S2 Exclusive",
-            "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-05-a.jpg",
-            "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-05-b.jpg",
-            "src3": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-05-c.jpg",
-            "src4": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-05-d.jpg",
+        },{
+            "id": "16",
+            "title": "U-lock Force",
+            "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-15-a.jpg",
+            "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-15-b.jpg",
+            "src3": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-15-c.jpg",
+            "src4": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-15-d.jpg",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
-            "price": "$600.00",
-            "del": "$750.00",
+            "price": "$99.00",
+            "del": "",
             "count": 1
         },
         {
-            "id": "12",
-            "title": "Practico Z50 Exclusive",
-            "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-09-a.jpg",
-            "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-09-b.jpg",
-            "src3": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-09-c.jpg",
-            "src4": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-09-d.jpg",
+            "id": "17",
+            "title": "U-lock Force MAX",
+            "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-16-a.jpg",
+            "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-16-b.jpg",
+            "src3": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-16-c.jpg",
+            "src4": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-16-d.jpg",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+            "price": "$90.00",
+            "del": "$90.00",
+            "count": 1
+        }
+    ],
+    "home2":[
+        {
+            "id": "5",
+            "title": "Libero X250",
+            "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-02-a.jpg",
+            "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-02-b.jpg",
+            "src3": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-02-c.jpg",
+            "src4": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-02-d.jpg",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
             "price": "$750.00",
             "del": "",
             "count": 1
-        },
-        {
-            "id": "13",
-            "title": "SilverPatch C1",
-            "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-07-a.jpg",
-            "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-07-b.jpg",
-            "src3": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-07-c.jpg",
-            "src4": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-07-d.jpg",
-            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
-            "price": "$725.00",
-            "del": "",
-            "count": 1
-        },
-        {
-            "id": "14",
-            "title": "SilverPatch MAX1",
-            "src": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-08-a.jpg",
-            "src2": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-08-b.jpg",
-            "src3": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-08-c.jpg",
-            "src4": "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-08-d.jpg",
-            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
-            "price": "$699.00",
-            "del": "",
-            "count": 1
-        }
+        }  
     ]
+
 }

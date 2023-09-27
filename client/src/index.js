@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter,RouterProvider, } from "react-router-dom";
-import { Provider } from 'react-redux'; 
+ 
 
 
 // pages
@@ -59,10 +59,10 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render((
 
-  <Provider store={Detail}>
+
 
     <RouterProvider router={router} />
-  </Provider>
+
 
 )
 );

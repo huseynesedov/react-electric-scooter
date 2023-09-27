@@ -1,14 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from "react-helmet";
+import { Link, useParams } from 'react-router-dom';
+import axios from 'axios';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faBox, faEye, faTruckFast, faMapLocationDot, faShieldHalved } from '@fortawesome/free-solid-svg-icons';
+import { FaWhatsapp, FaInstagramSquare, FaGithub } from 'react-icons/fa';
 
 import Navbar from '../../Components/nav/nav';
 import Footer from '../../Components/footer/footer';
 
 import './index.css'
 function Home() {
+
+    const [todos, setTodos] = useState({});
+    const [todos2, setTodos2] = useState({});
+
+    useEffect(() => {
+        const fetchTodos = async () => {
+            try {
+                const response = await axios.get(`http://localhost:3000/home`);
+                setTodos(response.data)
+            } catch (err) {
+            }
+
+        };
+        fetchTodos();
+
+    }, []);
+    useEffect(() => {
+        const fetchTodos = async () => {
+            try {
+                const response = await axios.get(`http://localhost:3000/home2`);
+                setTodos2(response.data)
+            } catch (err) {
+            }
+
+        };
+        fetchTodos();
+    }, []);
+
     return (
         <div>
             <Helmet>
@@ -19,6 +50,8 @@ function Home() {
             <Navbar></Navbar>
             <header className="header header-r">
                 <div className="centermain centermain-r">
+
+
                     <div className="left-1 left-1-r">
                         <div className="texts">
                             <h2>Libero X250</h2>
@@ -45,12 +78,21 @@ function Home() {
                                 <h3>SPEED</h3>
                             </span>
                         </div>
-                        <div>
-                            <div className="asagi asagi-r">
-                                <h3>$750.00</h3>
-                                <button className="button button-r">ADD TO CART</button>
-                            </div>
-                        </div>
+                        {todos2.length > 0 ?
+
+                            todos2.map((todo) => (
+
+                                <div>
+                                    <div className="asagi asagi-r" key={todo.id}>
+                                        <h3>$750.00</h3>
+                                        <Link to={`/Detail/${todo.id}`}>
+                                        
+                                        <button className="button button-r">ADD TO CART</button>
+                                        </Link>
+                                    </div>
+                                </div>
+                            )) : null
+                        }
                     </div>
                     <div className="center-1 center-1-r">
                         <img
@@ -72,23 +114,23 @@ function Home() {
                         <div className="rightbottom rightbottom-r">
                             <h2>SHARE:</h2>
                             <div>
-                                <a href="#">
+                                <Link to="https://www.instagram.com/huseyyn005/">
                                     <span>
-                                        {/* <FontAwesomeIcon icon={faWhatsapp} /> */}
+                                        <FaInstagramSquare />
+                                    </span>
+                                </Link>
+                                <Link to="https://wa.me/+994517600300">
+                                    <span>
+                                        <FaWhatsapp />
+                                    </span>
+                                </Link>
+                                <Link to="https://github.com/huseynesedov">
+                                    <span>
+                                        <FaGithub />
+                                    </span>
+                                </Link>
 
-                                    </span>
-                                </a>
-                                <a href="https://wa.me/qr/GNC6QCTHJCQHH1">
-                                    <span>
-                                        {/* <FontAwesomeIcon icon={faWhatsapp} /> */}
-                                    </span>
-                                </a>
-                                <a href="#">
-                                    <span>
-                                        {/* <FontAwesomeIcon icon={faWhatsapp} /> */}
 
-                                    </span>
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -96,162 +138,44 @@ function Home() {
             </header>
             <main className="main2">
                 <div className="centermain-2">
-                    <div className="cart-shop">
-                        <a href="#">
-                            <div className="orderimage">
-                                <img
-                                    src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-03-a-400x525.jpg"
-                                    alt=""
-                                />
-                                <div className="eyes baskets">
-                                    <div>
-                                        <FontAwesomeIcon className="fa-solid fa-basket-shopping" icon={faBox} />
+                    {todos.length > 0 ?
 
-                                        <div className="icon-title">Add To Cart</div>
+                        todos.map((todo) => (
+
+                            <div className="cart-shop" key={todo.id}>
+                                <Link to={`/Detail/${todo.id}`}>
+                                    <div className="orderimage">
+                                        <img src={todo.src} alt={todo.title} />
+                                        <div className="eyes baskets">
+                                            <div>
+                                                <FontAwesomeIcon className="fa-solid fa-basket-shopping" icon={faBox} />
+                                                <div className="icon-title">Add To Cart</div>
+                                            </div>
+                                            <div>
+                                                <FontAwesomeIcon icon={faEye} />
+                                                <div className="icon-title">Quick view</div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <FontAwesomeIcon icon={faEye} />
-                                        <div className="icon-title">Qucik view</div>
+                                    <div className="bottom-left">
+                                        <div className="star">
+                                            <FontAwesomeIcon icon={faStar} />
+                                            <FontAwesomeIcon icon={faStar} />
+                                            <FontAwesomeIcon icon={faStar} />
+                                            <FontAwesomeIcon icon={faStar} />
+                                            <FontAwesomeIcon icon={faStar} />
+                                        </div>
+                                        <h3>{todo.title}</h3>
+                                        <div className="bottom-left-bottom">
+                                            <p><del>{todo.del}</del></p>
+                                            <h2>{todo.price}</h2>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div className="bottom-left">
-                                <div className="star">
-                                    <FontAwesomeIcon icon={faStar} />
-                                    <FontAwesomeIcon icon={faStar} />
-                                    <FontAwesomeIcon icon={faStar} />
-                                    <FontAwesomeIcon icon={faStar} />
-                                    <FontAwesomeIcon icon={faStar} />
+                                </Link>
+                            </div >
 
-                                </div>
-                                <h3>Libero X350</h3>
-                                <div className="bottom-left-bottom">
-                                    <p>
-                                        <del>$875.00</del>
-                                    </p>
-                                    <h2>$799.00</h2>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="cart-shop">
-                        <a href="#">
-                            <div className="orderimage">
-                                <img
-                                    src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-04-a-400x525.jpg"
-                                    alt=""
-                                />
-                                <div className="eyes baskets">
-                                    <div>
-                                        <FontAwesomeIcon className="fa-solid fa-basket-shopping" icon={faBox} />
-
-                                        <div className="icon-title">Add To Cart</div>
-                                    </div>
-                                    <div>
-                                        <FontAwesomeIcon icon={faEye} />
-
-                                        <div className="icon-title">Qucik view</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="bottom-left">
-                                <div className="star">
-                                    <FontAwesomeIcon icon={faStar} />
-                                    <FontAwesomeIcon icon={faStar} />
-                                    <FontAwesomeIcon icon={faStar} />
-                                    <FontAwesomeIcon icon={faStar} />
-                                    <FontAwesomeIcon icon={faStar} />
-
-                                </div>
-                                <h3>Practico S2 Exclusive</h3>
-                                <div className="bottom-left-bottom">
-                                    <p>
-                                        <del>$750.00</del>
-                                    </p>
-                                    <h2>$600.00</h2>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="cart-shop">
-                        <a href="#">
-                            <div className="orderimage">
-                                <img
-                                    src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-15-a-400x525.jpg"
-                                    alt=""
-                                />
-                                <div className="eyes baskets">
-                                    <div>
-                                        <FontAwesomeIcon className="fa-solid fa-basket-shopping" icon={faBox} />
-
-                                        <div className="icon-title">Add To Cart</div>
-                                    </div>
-                                    <div>
-                                        <FontAwesomeIcon icon={faEye} />
-
-                                        <div className="icon-title">Qucik view</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="bottom-left">
-                                <div className="star">
-                                    <FontAwesomeIcon icon={faStar} />
-                                    <FontAwesomeIcon icon={faStar} />
-                                    <FontAwesomeIcon icon={faStar} />
-                                    <FontAwesomeIcon icon={faStar} />
-                                    <FontAwesomeIcon icon={faStar} />
-
-                                </div>
-                                <h3>U-Lock Force MAX</h3>
-                                <div className="bottom-left-bottom">
-                                    <p>
-                                        <del>$90.00</del>
-                                    </p>
-                                    <h2>$75.00</h2>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="cart-shop">
-                        <a href="#">
-                            <div className="orderimage">
-                                <img
-                                    src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-16-a-400x525.jpg"
-                                    alt=""
-                                />
-                                <div className="eyes baskets">
-                                    <div>
-                                        <FontAwesomeIcon className="fa-solid fa-basket-shopping" icon={faBox} />
-
-                                        <div className="icon-title">Add To Cart</div>
-                                    </div>
-                                    <div>
-                                        <FontAwesomeIcon icon={faEye} />
-
-                                        <div className="icon-title">Qucik view</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="bottom-left">
-                                <div className="star">
-                                    <FontAwesomeIcon icon={faStar} />
-                                    <FontAwesomeIcon icon={faStar} />
-                                    <FontAwesomeIcon icon={faStar} />
-                                    <FontAwesomeIcon icon={faStar} />
-                                    <FontAwesomeIcon icon={faStar} />
-
-                                </div>
-                                <h3>Unbeatable Lock 100</h3>
-                                <div className="bottom-left-bottom">
-                                    <p>
-                                        <del>$80.00</del>
-                                    </p>
-                                    <h2>$69.00</h2>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
+                        )) : null
+                    }
                 </div>
             </main>
             {/*     

@@ -15,7 +15,6 @@
 
 
 
-
     .main1 {
         width: 100%;
         height: 100vh;
@@ -151,8 +150,6 @@
     }
 
     .tr2 {
-        display: flex;
-        align-items: center;
         border-bottom: 1px solid #83848517;
     }
 
@@ -237,24 +234,43 @@
 
     .table {
         display: flex;
-        padding-left: 3em;
+        margin-top: 186px;
     }
 
     .tr {
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        height: 45px;
+        height: 117px;
         background-color: #F4FAFC;
         color: #535556;
     }
 
+    .tr2 {
+
+        height: 471px
+    }
+
     .tr td {
+        display: flex;
+        width: 100%;
+        align-items: center;
         border: 1px solid #F4FAFC;
+        justify-content: center;
+    }
+
+    .td {
+        height: 100%;
+    }
+
+    .dollar {
+        margin-top: 57px;
     }
 
     .delete {
         position: absolute;
-        right: 35px;
-        top: 50%;
+        right: 69px;
+        top: 92%;
         transform: translateY(-50%);
         border-top: 0;
         color: #C93535;
@@ -262,22 +278,24 @@
     }
 
     .main-tr {
+        height: 100%;
         border-bottom: 1px solid #dddddd;
-        display: table-row;
-        padding: 0.7em 1em;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
         position: relative;
     }
 
     .img2 {
-        margin-top: 10px;
-        margin-left: 20px;
-        max-width: 73px;
+        width: 108px;
+        max-width: 138px;
+        height: 86px;
+        margin-bottom: -50px;
     }
 
     .vote {
         display: inline-flex;
+        margin-top: 50px;
     }
 
     .minus {
@@ -315,7 +333,6 @@
     }
 
     .sag3 {
-        width: 30%;
         height: auto;
         display: flex;
         border: 2px solid rgba(149, 149, 149, 0.152);
@@ -324,8 +341,17 @@
     .td2 {
         width: 100%;
         color: black;
+        background-color: #F4FAFC;
         font-size: 1.2rem;
         padding: 0.7em 1em;
+    }
+
+    .price {
+        margin-top: 35px;
+    }
+
+    .ham {
+        margin-top: 66px;
     }
 
     .thead {
@@ -357,9 +383,17 @@
         align-items: center;
         border-bottom: 2px solid rgba(144, 143, 143, 0.211);
     }
-    .totals div p{
+
+    .totals div p {
         margin-left: 20px;
     }
+.tr3{
+    display: flex;
+        width: 100%;
+        align-items: center;
+        border: 1px solid #F4FAFC;
+        justify-content: center;
+}
     .button5 {
         padding: 5.5% 87px;
         border-radius: 5px;
