@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter,RouterProvider, } from "react-router-dom";
- 
+import { createBrowserRouter, RouterProvider, } from "react-router-dom";
+
 
 
 // pages
@@ -14,7 +14,8 @@ import Login from './pages/login/index'
 import Register from './pages/register/index'
 import AddToCart from './pages/add-to-cart/index'
 import Detail from './pages/Detail';
-
+import { Provider } from "react-redux";
+import { globalState } from './redux/store';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
   {
     path: "add",
     element: <AddToCart />,
-  },{
+  }, {
     path: "Detail/:id",
     element: <Detail />,
   }
@@ -59,9 +60,10 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render((
 
-
-
+  <Provider store={globalState}>
     <RouterProvider router={router} />
+  </Provider>
+
 
 
 )

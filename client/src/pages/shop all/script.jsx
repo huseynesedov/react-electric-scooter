@@ -72,7 +72,8 @@ function Shop() {
                   <img src={todo.src} alt={todo.title} />
                   <div className="eyes baskets">
                     <div>
-                      <FontAwesomeIcon className="fa-solid fa-basket-shopping" icon={faBox} />
+                      <FontAwesomeIcon className="fa-solid fa-basket-shopping"
+                        icon={faBox} />
                       <div className="icon-title">Add To Cart</div>
                     </div>
                     <div>

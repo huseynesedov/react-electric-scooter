@@ -10,23 +10,29 @@ import Footer from '../../Components/footer/footer';
 import debet from '../images/debet-cart.jpg'
 import { TiTick } from 'react-icons/ti';
 import './style.css'
+import { useDispatch } from 'react-redux';
+import { AddTocart } from '../../redux/actions/Cart.actions';
 function Detail() {
-    const { id } = useParams()
-    const [todos, setTodos] = useState({});
+    const { id } = useParams();
+    const [product, setProduct] = useState({});
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        const fetchTodos = async () => {
+        const fetchproduct = async () => {
             try {
                 const response = await axios.get(`http://localhost:3000/data/${id}`);
-                setTodos(response.data)
+                setProduct(response.data)
             } catch (err) {
             }
 
         };
-        fetchTodos();
+        fetchproduct();
     }, []);
 
 
+    const productAddToCart = () => {
+        dispatch(AddTocart(product))
+    }
 
     return (
         <>
@@ -44,10 +50,10 @@ function Detail() {
                     <div className="sol1">
 
                         <AliceCarousel>
-                            <img src={todos.src} className="yours-custom-class img" />
-                            <img src={todos.src2} className="yours-custom-class img" />
-                            <img src={todos.src3} className="yours-custom-class img" />
-                            <img src={todos.src4} className="yours-custom-class img" />
+                            <img src={product.src} className="yours-custom-class img" />
+                            <img src={product.src2} className="yours-custom-class img" />
+                            <img src={product.src3} className="yours-custom-class img" />
+                            <img src={product.src4} className="yours-custom-class img" />
                         </AliceCarousel>
 
 
@@ -57,13 +63,13 @@ function Detail() {
                     <div className="sag1">
                         <Link to="/electric" className='scooter'>Electric Scooters</Link>
 
-                        <h3 className='h3'>{todos.title}</h3>
+                        <h3 className='h3'>{product.title}</h3>
                         <div>
-                            <p className='p'><del>{todos.del}</del></p>
+                            <p className='p'><del>{product.del}</del></p>
 
-                            <h2 className='h2'>{todos.price}</h2><span className='h2-span'>& Free Shipping</span>
+                            <h2 className='h2'>{product.price}</h2><span className='h2-span'>& Free Shipping</span>
                         </div>
-                        <span className='content'>{todos.content}</span>
+                        <span className='content'>{product.content}</span>
                         <div className='add'>
 
                             <a href="" className="minus">
@@ -88,7 +94,7 @@ function Detail() {
                                 +
                             </a>
 
-                            <button className="button button-r">ADD TO CART</button>
+                            <button className="button button-r" onClick={productAddToCart}>ADD TO CART</button>
 
 
 
@@ -126,8 +132,8 @@ function Detail() {
 
                         Description
                     </h2>
-                    <h3 className='h3 mar'>{todos.title}</h3>
-                    <span className='content mar'>{todos.content}</span>
+                    <h3 className='h3 mar'>{product.title}</h3>
+                    <span className='content mar'>{product.content}</span>
 
                     <span className="content mar">Pellentesque magna arcu, lacinia sed mi non, pretium posuere eros. Mauris maximus imperdiet sem aliquam facilisis. Nam in sem at augue finibus vehicula eget quis sapien. Pellentesque malesuada ligula vel auctor facilisis. In condimentum mattis ornare.</span>
                 </div>

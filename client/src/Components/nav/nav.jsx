@@ -5,9 +5,11 @@ import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 import './nav-footer.css';
+import { useSelector } from 'react-redux';
 
 function Navbar() {
-  
+  const cartList = useSelector(state => state.basket)
+
   const [acmaq, setAcmaq] = useState(false);
   const [acmaq2, setAcmaq2] = useState(false);
 
@@ -49,7 +51,7 @@ function Navbar() {
               </li>
               <Link to='/Login'>
 
-              <FontAwesomeIcon className="fa-solid fas fa-user " icon={faUser} />
+                <FontAwesomeIcon className="fa-solid fas fa-user " icon={faUser} />
               </Link>
             </ul>
           </div>
@@ -75,12 +77,13 @@ function Navbar() {
               )}
             </div>
             <Link to='/add'>
-            
-            <FontAwesomeIcon className='box' icon={faBox} />
+
+              <FontAwesomeIcon className='box' icon={faBox} />
+              <span>{cartList.length}</span>
             </Link>
             <Link to='/Login'>
-            
-            <FontAwesomeIcon className='fa' icon={faUser} />
+
+              <FontAwesomeIcon className='fa' icon={faUser} />
             </Link>
           </div>
         </div>

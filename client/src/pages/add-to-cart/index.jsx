@@ -6,8 +6,20 @@ import Footer from '../../Components/footer/footer';
 
 import { AiTwotoneDelete } from "react-icons/ai";
 import './style.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { AddTocart, RemoveFromCart } from '../../redux/actions/Cart.actions';
 function AddToCart() {
 
+    const cartList = useSelector(state => state.basket);
+    const dispatch = useDispatch()
+    const productAddToCart = (param) => {
+        dispatch(AddTocart(param))
+        console.log(param);
+    }
+
+    const productRemovefromCart = (param) => {
+        dispatch(RemoveFromCart(param))
+    }
     return (
 
         <>
@@ -33,49 +45,37 @@ function AddToCart() {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr className="main-tr">
-                                    <td className="td-sag">
-                                        <img
-                                            className="img2"
-                                            src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/product-17-a.jpg"
-                                            alt=""
-                                        />
-                                    </td>
-                                    <td className='ham'>Hammer Scooter Lock</td>
-                                    <td class="td-sag price">16</td>
-                                    <td className="td-sag">
-                                        <div className="vote">
-                                            <a href="" className="minus">
-                                                -
-                                            </a>
-                                            <input
-                                                type="input"
-                                                id="quantity_64fb73ac4297a"
-                                                className="input-number"
-                                                name="cart[8a0e1141fd37fa5b98d5bb769ba1a7cc][qty]"
-                                                defaultValue={1}
-                                                aria-label="Product quantity"
-                                                size={4}
-                                                min={0}
-                                                max=""
-                                                step={1}
-                                                placeholder=""
-                                                inputMode="numeric"
-                                                autoComplete="off"
+                                {cartList.map(product => (
+                                    <tr className="main-tr" key={product.id}>
+                                        <td className="td-sag">
+                                            <img
+                                                className="img2"
+                                                src={product.src}
+                                                alt={product.title}
                                             />
-                                            <a href="" className="plus">
-                                                +
-                                            </a>
-                                        </div>
-                                    </td>
-                                    <td className="td-sag dollar">
-                                        750$
-                                    </td>
-                                    <td className="td-sag">
+                                        </td>
+                                        <td className='ham'>{product.title}</td>
+                                        <td class="td-sag price">{product.price}</td>
+                                        <td className="td-sag">
+                                            <div className="vote">
+                                                <button className="minus" onClick={() => productRemovefromCart(product.id)}>
+                                                    -
+                                                </button>
+                                                <span className="input-number">{product.quanty}</span>
+                                                <button className="plus" onClick={() => productAddToCart(product)}>
+                                                    +
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td className="td-sag dollar">
+                                            750$
+                                        </td>
+                                        <td className="td-sag">
+                                            <AiTwotoneDelete className='delete' />
+                                        </td>
+                                    </tr>
+                                ))}
 
-                                        <AiTwotoneDelete className='delete' />
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
