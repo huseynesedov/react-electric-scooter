@@ -30,7 +30,7 @@ function Footer() {
                         </p>
                     </div>
                     <div>
-                        <Link to="https://wa.me/+994517600300">
+                        <Link to="tel:+994517600300">
                         <i className="fa fa-phone" />
                         <p>+99451-760-03-00</p>
                         </Link>

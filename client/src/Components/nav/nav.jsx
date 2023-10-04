@@ -79,7 +79,7 @@ function Navbar() {
             <Link to='/add'>
 
               <FontAwesomeIcon className='box' icon={faBox} />
-              <span>{cartList.length}</span>
+              {/* <span className='cartlist'>{cartList.length}</span>/ */}
             </Link>
             <Link to='/Login'>
 

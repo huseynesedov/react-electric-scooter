@@ -68,7 +68,7 @@ function AddToCart() {
                                             </div>
                                         </td>
                                         <td className="td-sag dollar">
-                                            750$
+                                            {product.quanty * product.price}
                                         </td>
                                         <td className="td-sag">
                                             <AiTwotoneDelete className='delete' />
