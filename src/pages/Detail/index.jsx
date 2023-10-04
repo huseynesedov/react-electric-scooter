@@ -20,7 +20,7 @@ function Detail() {
     useEffect(() => {
         const fetchproduct = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/data/${id}`);
+                const response = await axios.get(`https://scooter-api.vercel.app/data/${id}`);
                 setProduct(response.data)
             } catch (err) {
             }

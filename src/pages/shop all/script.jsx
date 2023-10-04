@@ -17,7 +17,7 @@ function Shop() {
   useEffect(() => {
     const fetchTodos = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/data');
+        const response = await axios.get('https://scooter-api.vercel.app/data');
         setTodos(response.data)
 
       } catch (err) {

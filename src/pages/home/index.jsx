@@ -19,7 +19,7 @@ function Home() {
     useEffect(() => {
         const fetchTodos = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/home`);
+                const response = await axios.get(`https://scooter-api.vercel.app/home`);
                 setTodos(response.data)
             } catch (err) {
             }
@@ -31,7 +31,7 @@ function Home() {
     useEffect(() => {
         const fetchTodos = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/home2`);
+                const response = await axios.get(`https://scooter-api.vercel.app/home2`);
                 setTodos2(response.data)
             } catch (err) {
             }
