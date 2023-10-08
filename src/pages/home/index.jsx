@@ -9,8 +9,11 @@ import { FaWhatsapp, FaInstagramSquare, FaGithub } from 'react-icons/fa';
 
 import Navbar from '../../Components/nav/nav';
 import Footer from '../../Components/footer/footer';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 import './index.css'
+AOS.init();
 function Home() {
 
     const [todos, setTodos] = useState({});
@@ -52,13 +55,13 @@ function Home() {
                 <div className="centermain centermain-r">
 
 
-                    <div className="left-1 left-1-r">
+                    <div className="left-1 left-1-r" data-aos="fade-left" data-aos-duration={1000}>
                         <div className="texts">
-                            <h2>Libero X250</h2>
+                            <h2 data-aos="fade-left" data-aos-duration={1000}>Libero X250</h2>
                             <h4>250 Watt Electric Scooter</h4>
-                            <h5>Informations:</h5>
+                            <h5 data-aos="fade-down" data-aos-duration={1000}>Informations:</h5>
                         </div>
-                        <div className="spanmain spanmain-r">
+                        <div className="spanmain spanmain-r" data-aos="fade-right" data-aos-duration={1000}>
                             <span className="span-1-r span-1">
                                 <h4>
                                     <div className="km km-r">30 km</div>
@@ -94,16 +97,16 @@ function Home() {
                             )) : null
                         }
                     </div>
-                    <div className="center-1 center-1-r">
+                    <div className="center-1 center-1-r" data-aos="fade-up" data-aos-duration={1000}>
                         <img
                             className="img img-r"
                             src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/scooter-01.png"
                             alt=""
                         />
                     </div>
-                    <div className="right-1 right-1-r">
+                    <div className="right-1 right-1-r" data-aos="fade-right" data-aos-duration={1000}>
                         <div className="righttop righttop-r">
-                            <h2>Description</h2>
+                            <h2 d>Description</h2>
                             <p>
                                 The Fully Loaded Libero x250 is a High <br /> Performance,
                                 Extremely Durable, High <br /> Speed, Lightweight Electric Scooter with
@@ -115,18 +118,18 @@ function Home() {
                             <h2>SHARE:</h2>
                             <div>
                                 <Link to="https://www.instagram.com/huseyyn005/">
-                                    <span>
+                                    <span data-aos="fade-right" data-aos-duration={1000}>
                                         <FaInstagramSquare />
                                     </span>
                                 </Link>
                                 <Link to="https://wa.me/+994517600300">
-                                    <span>
+                                    <span data-aos="fade-up" data-aos-duration={1000}>
                                         <FaWhatsapp />
                                     </span>
                                 </Link>
                                 <Link to="https://github.com/huseynesedov">
-                                    <span>
-                                        <FaGithub />
+                                    <span data-aos="fade-down" data-aos-duration={1000}>
+                                        <FaGithub  />
                                     </span>
                                 </Link>
 
@@ -142,7 +145,7 @@ function Home() {
 
                         todos.map((todo) => (
 
-                            <div className="cart-shop" key={todo.id}>
+                            <div className="cart-shop" key={todo.id} data-aos="fade-up" data-aos-duration={1000}>
                                 <Link to={`/Detail/${todo.id}`}>
                                     <div className="orderimage">
                                         <img src={todo.src} alt={todo.title} />
@@ -188,12 +191,12 @@ function Home() {
       */}
             <main className="main3 main3-r">
                 <span className="line line-r" />
-                <h6>ABOUT US</h6>
-                <h2>
+                <h6 data-aos="flip-up">ABOUT US</h6>
+                <h2 data-aos="zoom-out-up">
                     If you’re looking for a brand <br /> new electric scooter, you’re in{" "}
                     <br /> the right place
                 </h2>
-                <p>
+                <p data-aos="zoom-out-down">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Quis <br /> ipsum
                     suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
@@ -232,17 +235,17 @@ function Home() {
                 </div>
                 <div className="centermain-3 centermain-3-r">
                     <i aria-hidden="true" className="fas fa-quote-right" />
-                    <h2 className="h2 h2-r">
+                    <h2 className="h2 h2-r" data-aos="zoom-out-left">
                         “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
                         suspendisse ultrices gravida. Risus commodo viverra maecenas.”
                     </h2>
                     <img
-                        className="img-2 img-2-r"
+                        className="img-2 img-2-r" data-aos="zoom-out-right"
                         src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/signature-01.png"
                         alt=""
                     />
-                    <p className="p p-r">MARIA OLIVER</p>
+                    <p className="p p-r" data-aos="zoom-out-right">MARIA OLIVER</p>
                 </div>
             </main>
             <main className="main7">
