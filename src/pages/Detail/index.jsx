@@ -72,27 +72,7 @@ function Detail() {
                         <span className='content'>{product.content}</span>
                         <div className='add'>
 
-                            <a href="" className="minus">
-                                -
-                            </a>
-                            <input
-                                type="input"
-                                id="quantity_64fb73ac4297a"
-                                className="input-number"
-                                name="cart[8a0e1141fd37fa5b98d5bb769ba1a7cc][qty]"
-                                defaultValue={1}
-                                aria-label="Product quantity"
-                                size={4}
-                                min={0}
-                                max=""
-                                step={1}
-                                placeholder=""
-                                inputMode="numeric"
-                                autoComplete="off"
-                            />
-                            <a href="" className="plus">
-                                +
-                            </a>
+                           
 
                             <button className="button button-r" onClick={productAddToCart}>ADD TO CART</button>
 

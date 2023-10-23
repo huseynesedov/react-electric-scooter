@@ -1,9 +1,8 @@
-
-
 let intialState = []
 const CartReducer = (state = intialState, action) => {
     if (action.type === "ADD_TO_CART") {
         const findedProduct = state.find(product => product.id === action.payload.id)
+
         const obj = {
             "id": action.payload.id,
             "title": action.payload.title,
@@ -15,7 +14,7 @@ const CartReducer = (state = intialState, action) => {
             "price": action.payload.price,
             "del": action.payload.del,
             "count": action.payload.count,
-            "quanty": 0
+            "quanty": 1
         }
         if (findedProduct) {
             findedProduct.quanty++
@@ -24,6 +23,7 @@ const CartReducer = (state = intialState, action) => {
             return [...state, obj]
         }
     }
+
     else if (action.type === "REMOVE_FROM_CART") {
         const findedProduct = state.find(product => product.id === action.payload)
         if (findedProduct.quanty > 0) {

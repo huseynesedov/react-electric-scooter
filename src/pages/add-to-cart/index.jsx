@@ -1,24 +1,33 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
+import { useDispatch, useSelector } from 'react-redux';
+import { AddTocart, RemoveFromCart } from '../../redux/actions/Cart.actions';
 
 import Navbar from '../../Components/nav/nav';
 import Footer from '../../Components/footer/footer';
 
 import { AiTwotoneDelete } from "react-icons/ai";
 import './style.css'
-import { useDispatch, useSelector } from 'react-redux';
-import { AddTocart, RemoveFromCart } from '../../redux/actions/Cart.actions';
 function AddToCart() {
 
     const cartList = useSelector(state => state.basket);
     const dispatch = useDispatch()
     const productAddToCart = (param) => {
         dispatch(AddTocart(param))
-        console.log(param);
     }
 
     const productRemovefromCart = (param) => {
         dispatch(RemoveFromCart(param))
+    }
+    const productRemovefromCarts = (product) => {
+        dispatch(RemoveFromCart(product.id)); // Sadece param.id'yi gönderin
+    }
+    const calculateTotal = () => {
+        let total = 0;
+        cartList.forEach(product => {
+            total += Number(product.price.slice(1)) * product.quanty;
+        });
+        return total.toFixed(2);
     }
     return (
 
@@ -36,11 +45,11 @@ function AddToCart() {
                         <table className="table">
                             <thead>
                                 <tr className="tr tr2">
-                                    <td className='td' > </td>
+                                    <td className='td' >Foto </td>
                                     <td className='td'>Product</td>
-                                    <td className='td'>price</td>
+                                    <td className='td'>Price</td>
                                     <td className='td'>Quantity</td>
-                                    <td className='td'>Subtotal</td>
+                                    <td className='td'>Total</td>
                                     <td className='td'>Delete</td>
                                 </tr>
                             </thead>
@@ -68,10 +77,12 @@ function AddToCart() {
                                             </div>
                                         </td>
                                         <td className="td-sag dollar">
-                                            {product.quanty * product.price}
+                                            ${Number(product.price.slice(1)) * product.quanty}
                                         </td>
                                         <td className="td-sag">
-                                            <AiTwotoneDelete className='delete' />
+                                            <AiTwotoneDelete className='delete'
+                                                onClick={() => productRemovefromCarts(product)}
+                                            />
                                         </td>
                                     </tr>
                                 ))}
@@ -87,7 +98,7 @@ function AddToCart() {
                             </tr>
                             <div className='totals'>
                                 <div>
-                                    <p>Total: $450 </p>
+                                    <p>Subtotal: $ {calculateTotal()}</p>
                                 </div>
                                 <button className="button5">CHECKOUT</button>
 
