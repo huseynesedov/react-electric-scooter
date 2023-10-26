@@ -11,3 +11,9 @@ export const RemoveFromCart = (payload) => {
         payload
     }
 }
+export const RemovesFromCart = (payload) => {
+    return {
+        type: "REMOVES_FROM_CART",
+        payload
+    }
+}

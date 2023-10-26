@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from 'react-redux';
-import { AddTocart, RemoveFromCart } from '../../redux/actions/Cart.actions';
+import { AddTocart, RemoveFromCart,RemovesFromCart } from '../../redux/actions/Cart.actions';
 
 import Navbar from '../../Components/nav/nav';
 import Footer from '../../Components/footer/footer';
@@ -19,8 +19,8 @@ function AddToCart() {
     const productRemovefromCart = (param) => {
         dispatch(RemoveFromCart(param))
     }
-    const productRemovefromCarts = (product) => {
-        dispatch(RemoveFromCart(product.id)); // Sadece param.id'yi gönderin
+    const productRemovesfromCart = (product) => {
+        dispatch(RemovesFromCart(product)); 
     }
     const calculateTotal = () => {
         let total = 0;
@@ -45,7 +45,7 @@ function AddToCart() {
                         <table className="table">
                             <thead>
                                 <tr className="tr tr2">
-                                    <td className='td' >Foto </td>
+                                    <td className='td'>Foto </td>
                                     <td className='td'>Product</td>
                                     <td className='td'>Price</td>
                                     <td className='td'>Quantity</td>
@@ -81,12 +81,11 @@ function AddToCart() {
                                         </td>
                                         <td className="td-sag">
                                             <AiTwotoneDelete className='delete'
-                                                onClick={() => productRemovefromCarts(product)}
+                                               onClick={() => productRemovesfromCart(product.id)}
                                             />
                                         </td>
                                     </tr>
                                 ))}
-
                             </tbody>
                         </table>
                     </div>
@@ -101,7 +100,6 @@ function AddToCart() {
                                     <p>Subtotal: $ {calculateTotal()}</p>
                                 </div>
                                 <button className="button5">CHECKOUT</button>
-
                             </div>
                         </thead>
                     </div>

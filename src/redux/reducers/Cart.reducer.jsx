@@ -34,7 +34,7 @@ const CartReducer = (state = intialState, action) => {
     else {
         return []
     }
-
+    
 }
 
 export default CartReducer

@@ -6,15 +6,28 @@ import Navbar from '../../Components/nav/nav';
 import Footer from '../../Components/footer/footer';
 
 import './login.css'
+import { useState } from 'react';
 function Login() {
+  const [password, setPassword] = useState("");
+  const [type, setType] = useState('password');
+  const handleToggle = () => {
+    if (type === 'password') {
 
+      setType('text')
+    } else {
+
+      setType('password')
+    }
+  }
   return (
+
     <>
-    <Helmet>
-                <meta charSet="utf-8" />
-                <title>Login | Electric scooter</title>
-                <link rel="canonical" href="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/scooter-02.png" />
-            </Helmet>
+
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Login | Electric scooter</title>
+        <link rel="canonical" href="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/scooter-02.png" />
+      </Helmet>
       <Navbar></Navbar>
       <main className="main11">
         <div className="opsi22">
@@ -31,17 +44,26 @@ function Login() {
               </label>
             </div>
             <div className="form__group field orta">
-              <input type="input" className="form__field" placeholder="Name" name="name" id="name" required="" />
+              <input type={type}
+                  name="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  autoComplete="current-password" className="form__field"   />
               <label htmlFor="name" className="form__label">
                 Password
               </label>
             </div>
             <div className="sag">
               <p>Forgot Password?</p>
-              <label className="cyberpunk-checkbox-label">
-                <input type="checkbox" className="cyberpunk-checkbox" />
+
+
+              <label onClick={handleToggle} className="cyberpunk-checkbox-label">
+                <input type="checkbox" onClick={handleToggle} className="cyberpunk-checkbox" />
                 Remember Me
               </label>
+
+
             </div>
             <div className="buttons">
               <div className="wrapper">

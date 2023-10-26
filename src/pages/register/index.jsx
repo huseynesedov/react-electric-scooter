@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from "react-helmet";
 
 import Navbar from '../../Components/nav/nav';
@@ -6,7 +6,17 @@ import Footer from '../../Components/footer/footer';
 
 import './register.css'
 function Register() {
-
+    const [password, setPassword] = useState("");
+    const [type, setType] = useState('password');
+    const handleToggle = () => {
+      if (type === 'password') {
+  
+        setType('text')
+      } else {
+  
+        setType('password')
+      }
+    }
     return (
 
 
@@ -41,10 +51,15 @@ function Register() {
                         </div>
                         <div className="form__group field orta">
                             <input
-                                type="password"
+                                type={type}
+                                name="password"
+                                placeholder="Password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                autoComplete="current-password"
                                 className="form__field"
-                                placeholder="Name"
-                                name="name"
+                          
+                                
                                 id="name"
                                 required=""
                             />
@@ -54,20 +69,24 @@ function Register() {
                         </div>
                         <div className="form__group field orta">
                             <input
-                                type="password"
-                                className="form__field"
-                                placeholder="Name"
-                                name="name3"
-                                id="name3"
+                               type={type}
+                               name="password"
+                               placeholder="Password"
+                               value={password}
+                               onChange={(e) => setPassword(e.target.value)}
+                               autoComplete="current-password"
+                              
                                 required=""
+                                id="name3"
+                                className="form__field"
                             />
                             <label htmlFor="name3" className="form__label">
                                 Confirm Password
                             </label>
                         </div>
                         <div className="sag">
-                            <label className="cyberpunk-checkbox-label">
-                                <input type="checkbox" className="cyberpunk-checkbox" />
+                            <label onClick={handleToggle} className="cyberpunk-checkbox-label">
+                                <input onClick={handleToggle} type="checkbox" className="cyberpunk-checkbox" />
                                 Remember Me
                             </label>
                         </div>

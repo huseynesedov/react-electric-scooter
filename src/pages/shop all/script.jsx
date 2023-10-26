@@ -12,18 +12,19 @@ import './shop.css'
 import { Link } from 'react-router-dom';
 
 function Shop() {
-  const [todos, setTodos] = useState([]);
 
+
+  // api
+
+  const [todos, setTodos] = useState([]);
   useEffect(() => {
     const fetchTodos = async () => {
       try {
         const response = await axios.get('https://scooter-api.vercel.app/data');
         setTodos(response.data)
-
       } catch (err) {
         console.log(err);
       }
-
     };
     fetchTodos();
   }, []);
