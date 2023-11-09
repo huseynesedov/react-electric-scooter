@@ -22,13 +22,35 @@ function Login() {
   return (
 
     <>
+{/* 
+        ----------------------
+        web site title section 
+        ----------------------
+      */}
+
 
       <Helmet>
         <meta charSet="utf-8" />
         <title>Login | Electric scooter</title>
         <link rel="canonical" href="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/scooter-02.png" />
       </Helmet>
+
+      {/* 
+        ----------------------
+                NAVBAR
+        ----------------------
+      */}
+
       <Navbar></Navbar>
+
+      {/*     
+      ==========================================================
+          
+                    M A I N 1 
+          
+      ==========================================================               
+          
+      */}
       <main className="main11">
         <div className="opsi22">
           <div className="gif1">
@@ -86,6 +108,14 @@ function Login() {
 
         </div>
       </main>
+      {/*     
+      ==========================================================
+          
+                    Footer
+          
+      ==========================================================               
+          
+      */}
       <Footer></Footer>
     </>
 

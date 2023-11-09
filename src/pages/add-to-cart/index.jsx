@@ -32,6 +32,11 @@ function AddToCart() {
     return (
 
         <>
+        {/* 
+        ----------------------
+        web site title section 
+        ----------------------
+      */}
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Add To Cart | Electric scooter</title>

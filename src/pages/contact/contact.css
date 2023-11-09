@@ -10,9 +10,32 @@
 ==========================================================               
 
  */
+.map {
+    width: 100%;
+}
 
 @media (min-width:901px) {
+    .reklam {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: center;
 
+        background-color: rgba(192, 190, 190, 0.101);
+
+    }
+
+    .roww {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(./img-video/singing-contract.gif);
+        background-position: right;
+        background-size: 30%;
+        background-repeat: no-repeat;
+    }
 
     .main-contact {
         width: 100%;
@@ -145,6 +168,23 @@
 
 
 @media (max-width:900px) {
+    .reklam {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: start;
+        justify-content: left;
+        background-image: url(./img-video/singing-contract.gif);
+        background-position: center;
+        background-size: 60%;
+        background-color: rgba(128, 128, 128, 0.101);
+        background-repeat: no-repeat;
+    }
+
+    .reklam h1 {
+        margin-top: 90px;
+        margin-left: 100px;
+    }
 
     .main-contact {
         width: 100%;
@@ -255,7 +295,7 @@
         display: none;
     }
 
-    .block2{
+    .block2 {
         display: block;
     }
 
@@ -272,4 +312,3 @@
     margin-top: 15px;
     color: #2600ff;
 }
-

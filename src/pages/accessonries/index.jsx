@@ -14,28 +14,33 @@ import "../electric-scooter/style.css"
 function Accessonries() {
     const [todos, setTodos] = useState([]);
 
-        useEffect(() => {
-          const fetchTodos = async () => {
+    useEffect(() => {
+        const fetchTodos = async () => {
             try {
-              const response = await axios.get('https://scooter-api.vercel.app/accessonries');
-              setTodos(response.data)
-      
+                const response = await axios.get('https://scooter-api.vercel.app/accessonries');
+                setTodos(response.data)
+
             } catch (err) {
-              console.log(err);
+                console.log(err);
             }
-      
-          };
-          fetchTodos();
-        }, []);
+
+        };
+        fetchTodos();
+    }, []);
     return (
-        
+
         <>
+        {/* 
+        ----------------------
+        web site title section 
+        ----------------------
+      */}
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Accessonries Archives | Electric scooter</title>
                 <link rel="canonical" href="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/scooter-02.png" />
             </Helmet>
-
+            {/* NavBar */}
             <Navbar></Navbar>
             <div className="filter">
                 <div>
@@ -60,6 +65,8 @@ function Accessonries() {
                     </select>
                 </div>
             </div>
+
+            {/* Accessonriess ALL */}
             <section id="shop">
                 {todos.length > 0 ?
 

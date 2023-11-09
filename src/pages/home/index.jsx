@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from "react-helmet";
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,11 +9,8 @@ import { FaWhatsapp, FaInstagramSquare, FaGithub } from 'react-icons/fa';
 
 import Navbar from '../../Components/nav/nav';
 import Footer from '../../Components/footer/footer';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 import './index.css'
-AOS.init();
 function Home() {
 
     const [todos, setTodos] = useState({});
@@ -44,13 +41,35 @@ function Home() {
     }, []);
 
     return (
-        <div>
+        <>
+            {/* 
+        ----------------------
+        web site title section 
+        ----------------------
+      */}
+
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Electric scooter</title>
                 <link rel="canonical" href="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/scooter-02.png" />
             </Helmet>
+
+            {/* 
+        ----------------------
+                NAVBAR
+        ----------------------
+      */}
+
             <Navbar></Navbar>
+      
+                {/*     
+      ==========================================================
+          
+                            M A I N 1 
+          
+      ==========================================================               
+          
+      */}
             <header className="header header-r">
                 <div className="centermain centermain-r">
 
@@ -68,13 +87,13 @@ function Home() {
                                 </h4>
                                 <h3>BATTERY</h3>
                             </span>
-                            <span className="span-1-r span-1">
+                            <span className="span-1-r span-1 span-2">
                                 <h4>
                                     <div className="km-r km">13.5 KG</div>
                                 </h4>
                                 <h3>WEIGHT</h3>
                             </span>
-                            <span className="span-1-r span-1">
+                            <span className="span-1-r span-1 span-3">
                                 <h4>
                                     <div className="km-r km">25 km/h</div>
                                 </h4>
@@ -89,8 +108,8 @@ function Home() {
                                     <div className="asagi asagi-r" key={todo.id}>
                                         <h3>$750.00</h3>
                                         <Link to={`/Detail/${todo.id}`}>
-                                        
-                                        <button className="button button-r">ADD TO CART</button>
+
+                                            <button className="button button-r">ADD TO CART</button>
                                         </Link>
                                     </div>
                                 </div>
@@ -129,7 +148,7 @@ function Home() {
                                 </Link>
                                 <Link to="https://github.com/huseynesedov">
                                     <span data-aos="fade-down" data-aos-duration={1000}>
-                                        <FaGithub  />
+                                        <FaGithub />
                                     </span>
                                 </Link>
 
@@ -139,6 +158,14 @@ function Home() {
                     </div>
                 </div>
             </header>
+                 {/*     
+      ==========================================================
+          
+                                 M A I N 2 
+          
+      ==========================================================               
+          
+      */}
             <main className="main2">
                 <div className="centermain-2">
                     {todos.length > 0 ?
@@ -184,7 +211,7 @@ function Home() {
             {/*     
       ==========================================================
           
-                    M A I N 3 
+                            M A I N 3 
           
       ==========================================================               
           
@@ -206,7 +233,7 @@ function Home() {
             {/*     
       ==========================================================
           
-                    M A I N 4 
+                            M A I N 4 
           
       ==========================================================               
           
@@ -215,7 +242,7 @@ function Home() {
             {/*     
       ==========================================================
           
-                    M A I N 5 
+                           M A I N 5 
           
       ==========================================================               
           
@@ -298,6 +325,14 @@ function Home() {
                     </div>
                 </div>
             </main>
+                 {/*     
+      ==========================================================
+          
+                    M A I N 8 
+          
+      ==========================================================               
+          
+      */}
             <main className="main8">
                 <div className="centermain-6">
                     <div>
@@ -315,8 +350,16 @@ function Home() {
                     </div>
                 </div>
             </main>
+            {/*     
+      ==========================================================
+          
+                    Footer
+          
+      ==========================================================               
+          
+      */}
             <Footer></Footer>
-        </div>
+        </ >
     );
 }
 

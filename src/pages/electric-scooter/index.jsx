@@ -3,10 +3,11 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 
+//components
 import Navbar from '../../Components/nav/nav';
 import Footer from '../../Components/footer/footer';
 
-
+// icons styles
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faBox, faEye, faFilter } from '@fortawesome/free-solid-svg-icons';
 
@@ -29,12 +30,27 @@ function ElectricScooter() {
     return (
 
         <>
+        {/* 
+        ----------------------
+        web site title section 
+        ----------------------
+      */}
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Electric Scooter Archives | Electric scooter</title>
                 <link rel="canonical" href="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/scooter-02.png" />
             </Helmet>
+            {/* 
+        ----------------------
+                NAVBAR 
+        ----------------------
+      */}
             <Navbar></Navbar>
+            {/* 
+        ----------------------
+                FILTER  
+        ----------------------
+      */}
             <div className="filter">
                 <div>
                     <p>Home / Electric Scooters</p>
@@ -58,6 +74,14 @@ function ElectricScooter() {
                     </select>
                 </div>
             </div>
+        {/*     
+      ==========================================================
+          
+                    M A I N 1 
+          
+      ==========================================================               
+          
+      */}
             <section id="shop">
                 {todos.length > 0 ?
 
@@ -100,6 +124,14 @@ function ElectricScooter() {
 
 
             </section>
+            {/*     
+      ==========================================================
+          
+                    Footer 
+          
+      ==========================================================               
+          
+      */}
             <Footer></Footer>
         </>
 

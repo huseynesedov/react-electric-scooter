@@ -8,7 +8,7 @@ import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import Home from './App';
 import Shop from './pages/shop all/script';
 import ElectricScooter from './pages/electric-scooter';
-import Accessonries from './pages/accessonries/index';
+import Accessories from './pages/accessonries/index';
 import Contact from './pages/contact/contact'
 import Login from './pages/login/index'
 import Register from './pages/register/index'
@@ -32,8 +32,8 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "Accessonries",
-    element: <Accessonries />,
+    path: "Accessories",
+    element: <Accessories />,
   },
 
   {

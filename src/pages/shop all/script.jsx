@@ -32,13 +32,30 @@ function Shop() {
 
   return (
     <>
+      {/* 
+        ----------------------
+        web site title section 
+        ----------------------
+      */}
       <Helmet>
         <meta charSet="utf-8" />
         <title>Shop All | Electric scooter</title>
         <link rel="canonical" href="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/scooter-02.png" />
       </Helmet>
+
+      {/* 
+            ----------------------
+                    NAVBAR
+            ----------------------
+            */}
+
       <Navbar></Navbar>
 
+      {/* 
+        ----------------------
+              FILTER
+        ----------------------
+      */}
       <div className="filter">
         <div>
           <p>Home / Shop All</p>
@@ -62,6 +79,14 @@ function Shop() {
           </select>
         </div>
       </div>
+        {/*     
+      ==========================================================
+          
+                    M A I N 1 
+          
+      ==========================================================               
+          
+      */}
       <section id="shop">
         {todos.length > 0 ?
 
