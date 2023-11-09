@@ -16,6 +16,7 @@ import AddToCart from './pages/add-to-cart/index'
 import Detail from './pages/Detail';
 import { Provider } from "react-redux";
 import { globalState } from './redux/store';
+import Eror from './pages/404/404';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: "Contact",
     element: <Contact />,
+  },
+  {
+    path: "*",
+    element: <Eror />,
   },
   {
     path: "Login",
