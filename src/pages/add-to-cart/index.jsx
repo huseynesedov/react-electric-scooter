@@ -48,7 +48,7 @@ function AddToCart() {
                     <div className="sol">
                         <h3>Cart</h3>
                         <table className="table">
-                            <thead>
+                            <thead className='none'>
                                 <tr className="tr tr2">
                                     <td className='td'>Foto </td>
                                     <td className='td'>Product</td>

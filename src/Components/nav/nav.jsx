@@ -25,9 +25,6 @@ function Navbar() {
   };
 
   useEffect(() => {
-    // Fetch data here or set data using a different method
-    // For the sake of simplicity, let's assume data is already available
-    // Replace this with your actual data fetching logic
     const fetchData = async () => {
       try {
         const response = await fetch('https://scooter-api.vercel.app/data');
