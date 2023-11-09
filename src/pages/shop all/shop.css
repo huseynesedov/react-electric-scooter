@@ -285,6 +285,8 @@ a{
         width: 96%;
         height: auto;
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-wrap: wrap;
     }
 
