@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from "react-helmet";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+// carousel
+import Carousel from "nuka-carousel"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faBox, faEye, faTruckFast, faMapLocationDot, faShieldHalved } from '@fortawesome/free-solid-svg-icons';
@@ -15,6 +17,8 @@ function Home() {
 
     const [todos, setTodos] = useState({});
     const [todos2, setTodos2] = useState({});
+    const [todos3, setTodos3] = useState({});
+
 
     useEffect(() => {
         const fetchTodos = async () => {
@@ -33,6 +37,17 @@ function Home() {
             try {
                 const response = await axios.get(`https://scooter-api.vercel.app/home2`);
                 setTodos2(response.data)
+            } catch (err) {
+            }
+
+        };
+        fetchTodos();
+    }, []);
+    useEffect(() => {
+        const fetchTodos = async () => {
+            try {
+                const response = await axios.get(`https://scooter-api.vercel.app/home3`);
+                setTodos3(response.data)
             } catch (err) {
             }
 
@@ -61,8 +76,8 @@ function Home() {
       */}
 
             <Navbar></Navbar>
-      
-                {/*     
+
+            {/*     
       ==========================================================
           
                             M A I N 1 
@@ -70,95 +85,199 @@ function Home() {
       ==========================================================               
           
       */}
-            <header className="header header-r">
-                <div className="centermain centermain-r">
+            <Carousel>
+                <div>
+                    <header className="header header-r">
+                        <div className="centermain centermain-r">
 
 
-                    <div className="left-1 left-1-r" data-aos="fade-left" data-aos-duration={1000}>
-                        <div className="texts">
-                            <h2 data-aos="fade-left" data-aos-duration={1000}>Libero X250</h2>
-                            <h4>250 Watt Electric Scooter</h4>
-                            <h5 data-aos="fade-down" data-aos-duration={1000}>Informations:</h5>
-                        </div>
-                        <div className="spanmain spanmain-r" data-aos="fade-right" data-aos-duration={1000}>
-                            <span className="span-1-r span-1">
-                                <h4>
-                                    <div className="km km-r">30 km</div>
-                                </h4>
-                                <h3>BATTERY</h3>
-                            </span>
-                            <span className="span-1-r span-1 span-2">
-                                <h4>
-                                    <div className="km-r km">13.5 KG</div>
-                                </h4>
-                                <h3>WEIGHT</h3>
-                            </span>
-                            <span className="span-1-r span-1 span-3">
-                                <h4>
-                                    <div className="km-r km">25 km/h</div>
-                                </h4>
-                                <h3>SPEED</h3>
-                            </span>
-                        </div>
-                        {todos2.length > 0 ?
+                            <div className="left-1 left-1-r" data-aos="fade-left" data-aos-duration={1000}>
+                                <div className="texts">
+                                    <h2 data-aos="fade-left" data-aos-duration={1000}>Libero X250</h2>
+                                    <h4>250 Watt Electric Scooter</h4>
+                                    <h5 data-aos="fade-down" data-aos-duration={1000}>Informations:</h5>
+                                </div>
+                                <div className="spanmain spanmain-r" data-aos="fade-right" data-aos-duration={1000}>
+                                    <span className="span-1-r span-1">
+                                        <h4>
+                                            <div className="km km-r">30 km</div>
+                                        </h4>
+                                        <h3>BATTERY</h3>
+                                    </span>
+                                    <span className="span-1-r span-1 span-2">
+                                        <h4>
+                                            <div className="km-r km">13.5 KG</div>
+                                        </h4>
+                                        <h3>WEIGHT</h3>
+                                    </span>
+                                    <span className="span-1-r span-1 span-3">
+                                        <h4>
+                                            <div className="km-r km">25 km/h</div>
+                                        </h4>
+                                        <h3>SPEED</h3>
+                                    </span>
+                                </div>
+                                {todos2.length > 0 ?
 
-                            todos2.map((todo) => (
+                                    todos2.map((todo) => (
 
-                                <div>
-                                    <div className="asagi asagi-r" key={todo.id}>
-                                        <h3>$750.00</h3>
-                                        <Link to={`/Detail/${todo.id}`}>
+                                        <div>
+                                            <div className="asagi asagi-r" key={todo.id}>
+                                                <h3>$750.00</h3>
+                                                <Link to={`/Detail/${todo.id}`}>
 
-                                            <button className="button button-r">ADD TO CART</button>
+                                                    <button className="button button-r">ADD TO CART</button>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    )) : null
+                                }
+                            </div>
+                            <div className="center-1 center-1-r" data-aos="fade-up" data-aos-duration={1000}>
+                                <img
+                                    className="img img-r"
+                                    src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/scooter-01.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div className="right-1 right-1-r" data-aos="fade-right" data-aos-duration={1000}>
+                                <div className="righttop righttop-r">
+                                    <h2 d>Description</h2>
+                                    <p>
+                                        The Fully Loaded Libero x250 is a High <br /> Performance,
+                                        Extremely Durable, High <br /> Speed, Lightweight Electric Scooter with
+                                        a{" "}
+                                        <br /> Huge Battery
+                                    </p>
+                                </div>
+                                <div className="rightbottom rightbottom-r">
+                                    <h2>SHARE:</h2>
+                                    <div>
+                                        <Link to="https://www.instagram.com/huseyyn005/">
+                                            <span data-aos="fade-right" data-aos-duration={1000}>
+                                                <FaInstagramSquare />
+                                            </span>
                                         </Link>
+                                        <Link to="https://wa.me/+994517600300">
+                                            <span data-aos="fade-up" data-aos-duration={1000}>
+                                                <FaWhatsapp />
+                                            </span>
+                                        </Link>
+                                        <Link to="https://github.com/huseynesedov">
+                                            <span data-aos="fade-down" data-aos-duration={1000}>
+                                                <FaGithub />
+                                            </span>
+                                        </Link>
+
+
                                     </div>
                                 </div>
-                            )) : null
-                        }
-                    </div>
-                    <div className="center-1 center-1-r" data-aos="fade-up" data-aos-duration={1000}>
-                        <img
-                            className="img img-r"
-                            src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/scooter-01.png"
-                            alt=""
-                        />
-                    </div>
-                    <div className="right-1 right-1-r" data-aos="fade-right" data-aos-duration={1000}>
-                        <div className="righttop righttop-r">
-                            <h2 d>Description</h2>
-                            <p>
-                                The Fully Loaded Libero x250 is a High <br /> Performance,
-                                Extremely Durable, High <br /> Speed, Lightweight Electric Scooter with
-                                a{" "}
-                                <br /> Huge Battery
-                            </p>
-                        </div>
-                        <div className="rightbottom rightbottom-r">
-                            <h2>SHARE:</h2>
-                            <div>
-                                <Link to="https://www.instagram.com/huseyyn005/">
-                                    <span data-aos="fade-right" data-aos-duration={1000}>
-                                        <FaInstagramSquare />
-                                    </span>
-                                </Link>
-                                <Link to="https://wa.me/+994517600300">
-                                    <span data-aos="fade-up" data-aos-duration={1000}>
-                                        <FaWhatsapp />
-                                    </span>
-                                </Link>
-                                <Link to="https://github.com/huseynesedov">
-                                    <span data-aos="fade-down" data-aos-duration={1000}>
-                                        <FaGithub />
-                                    </span>
-                                </Link>
-
-
                             </div>
                         </div>
-                    </div>
+                    </header>
                 </div>
-            </header>
-                 {/*     
+
+                <div>
+                    <header className="header header-r">
+                        <div className="centermain centermain-r">
+                            <div className="left-1 left-1-r" data-aos="fade-left" data-aos-duration={1000}>
+                                <div className="texts">
+                                    <h2 data-aos="fade-left" data-aos-duration={1000}>Practico Pro 500</h2>
+                                    <h4>300 Watt Electric Scooter</h4>
+                                    <h5 data-aos="fade-down" data-aos-duration={1000}>Informations:</h5>
+                                </div>
+                                <div className="spanmain spanmain-r" data-aos="fade-right" data-aos-duration={1000}>
+                                    <span className="span-1-r span-1">
+                                        <h4>
+                                            <div className="km km-r">45 km</div>
+                                        </h4>
+                                        <h3>BATTERY</h3>
+                                    </span>
+                                    <span className="span-1-r span-1 span-2">
+                                        <h4>
+                                            <div className="km-r km">15.5 KG</div>
+                                        </h4>
+                                        <h3>WEIGHT</h3>
+                                    </span>
+                                    <span className="span-1-r span-1 span-3">
+                                        <h4>
+                                            <div className="km-r km">30 km/h</div>
+                                        </h4>
+                                        <h3>SPEED</h3>
+                                    </span>
+                                </div>
+                                {todos3.length > 0 ?
+
+                                    todos3.map((todo) => (
+
+                                        <div>
+                                            <div className="asagi asagi-r" key={todo.id}>
+                                                <h3>$699.00</h3>
+                                                <Link to={`/Detail/${todo.id}`}>
+
+                                                    <button className="button button-r">ADD TO CART</button>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    )) : null
+                                }
+                            </div>
+                            <div className="center-1 center-1-r" >
+                                <img
+                                    className="img img-r"
+                                    src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/scooter-02.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div className="right-1 right-1-r" >
+                                <div className="righttop righttop-r">
+                                    <h2 d>Description</h2>
+                                    <p>
+                                        The Fully Loaded Libero x250 is a High <br /> Performance,
+                                        Extremely Durable, High <br /> Speed, Lightweight Electric Scooter with
+                                        a
+                                        <br /> Huge Battery
+                                    </p>
+                                </div>
+                                <div className="rightbottom rightbottom-r">
+                                    <h2>SHARE:</h2>
+                                    <div>
+                                        <Link to="https://www.instagram.com/huseyyn005/">
+                                            <span data-aos="fade-right" >
+                                                <FaInstagramSquare />
+                                            </span>
+                                        </Link>
+                                        <Link to="https://wa.me/+994517600300">
+                                            <span data-aos="fade-up" data-aos-duration={1000}>
+                                                <FaWhatsapp />
+                                            </span>
+                                        </Link>
+                                        <Link to="https://github.com/huseynesedov">
+                                            <span data-aos="fade-down" data-aos-duration={1000}>
+                                                <FaGithub />
+                                            </span>
+                                        </Link>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+            </Carousel>
+
+
+
+
+
+
+
+
+
+
+
+            {/*     
       ==========================================================
           
                                  M A I N 2 
@@ -325,7 +444,7 @@ function Home() {
                     </div>
                 </div>
             </main>
-                 {/*     
+            {/*     
       ==========================================================
           
                     M A I N 8 

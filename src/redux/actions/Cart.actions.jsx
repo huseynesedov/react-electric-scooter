@@ -13,7 +13,7 @@ export const RemoveFromCart = (payload) => {
 }
 export const RemovesFromCart = (payload) => {
     return {
-        type: "REMOVES_FROM_CART",
+        type: "REMOVE_ITEM",
         payload
     }
 }

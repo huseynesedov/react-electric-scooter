@@ -12,14 +12,14 @@ function AddToCart() {
 
     const cartList = useSelector(state => state.basket);
     const dispatch = useDispatch()
+    
     const productAddToCart = (param) => {
         dispatch(AddTocart(param))
     }
-
     const productRemovefromCart = (param) => {
         dispatch(RemoveFromCart(param))
     }
-    const productRemovesfromCart = (product) => {
+    const REMOVE_ITEM = (product) => {
         dispatch(RemovesFromCart(product)); 
     }
     const calculateTotal = () => {
@@ -48,7 +48,7 @@ function AddToCart() {
                     <div className="sol">
                         <h3>Cart</h3>
                         <table className="table">
-                            <thead className='none'>
+                            <thead className='non'>
                                 <tr className="tr tr2">
                                     <td className='td'>Foto </td>
                                     <td className='td'>Product</td>
@@ -72,7 +72,7 @@ function AddToCart() {
                                         <td class="td-sag price">{product.price}</td>
                                         <td className="td-sag">
                                             <div className="vote">
-                                                <button className="minus" onClick={() => productRemovefromCart(product.id)}>
+                                                <button className="minus" onClick={() => REMOVE_ITEM(product.id)}>
                                                     -
                                                 </button>
                                                 <span className="input-number">{product.quanty}</span>
@@ -86,7 +86,7 @@ function AddToCart() {
                                         </td>
                                         <td className="td-sag">
                                             <AiTwotoneDelete className='delete'
-                                               onClick={() => productRemovesfromCart(product.id)}
+                                              onClick={() => productRemovefromCart(product.id)}
                                             />
                                         </td>
                                     </tr>
